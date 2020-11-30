@@ -1,0 +1,12 @@
+<!--Code pour la navbar en haut de la page-->
+<ul>
+  <!--Le routerLink permet de naviguer entre les pages en suivant le chemin défini dans app.module.ts-->
+  <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
+  <li routerLinkActive="active"><a routerLink="equipements">Equipements</a></li>
+  <li routerLinkActive="active"><a routerLink="creerequipements">Création Equipements</a></li>
+  <li routerLinkActive="active"><a routerLink="creeroids">Création OIDS</a></li>
+  <li routerLinkActive="active"><a routerLink="creermonitorings">Création Monitorings</a></li>
+</ul>
+
+<!--Permet de garder la navbar en haut de la page quand on navigue sur une autre page-->
+<router-outlet></router-outlet>

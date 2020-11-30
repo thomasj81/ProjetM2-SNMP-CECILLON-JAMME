@@ -1,0 +1,35 @@
+<form [formGroup]="formulaireEquipement"> <!-- formulaireEquipement contenu dans creer-equipements.component.ts  -->
+  <h2>Créer un équipement : </h2>
+  <br>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">Nom de l'équipement *</label>
+      <input type="text" class="form-control" formControlName="Nom_Equipement" placeholder="Nom Equipement"> <!-- Champ Nom_Equipement du formulaireEquipement contenu dans creer-equipements.component.ts -->
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">IP de l'équipement *</label>
+      <input type="text" class="form-control" formControlName="IP" placeholder="IP"> <!-- Champ IP du formulaireEquipement contenu dans creer-equipements.component.ts -->
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">MAC de l'équipement *</label>
+      <input type="text" class="form-control" formControlName="MAC" placeholder="MAC"> <!-- Champ MAC du formulaireEquipement contenu dans creer-equipements.component.ts -->
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">Communauté de l'équipement *</label>
+      <input type="text" class="form-control" formControlName="Communaute" placeholder="Communaute"> <!-- Champ Communaute du formulaireEquipement contenu dans creer-equipements.component.ts -->
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">Version SNMP de l'équipement *</label>
+      <input type="text" class="form-control" formControlName="Version_SNMP" placeholder="Version_SNMP"> <!-- Champ Version_SNMP du formulaireEquipement contenu dans creer-equipements.component.ts -->
+    </div>
+  </div>
+</form>
+<button type="button" (click)="envoyerEquipement()" class="btn btn-primary btn-default">Créer</button> <!--Quand on clique sur le bouton ça appel la fonction dans le fichier creer-equipements.component.ts qui redirige  -->

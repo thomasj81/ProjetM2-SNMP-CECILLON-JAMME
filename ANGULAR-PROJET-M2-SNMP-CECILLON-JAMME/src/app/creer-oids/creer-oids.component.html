@@ -1,0 +1,11 @@
+<form [formGroup]="formulaireOID"> <!-- formulaireOID contenu dans creer-oids.component.ts  -->
+  <h2>Créer un OID : </h2>
+  <br>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">Numéro de l'OID *</label>
+      <input type="text" class="form-control" formControlName="Numero" placeholder="Numero"> <!-- Champ Numero du formulaireOID contenu dans creer-oids.component.ts -->
+    </div>
+  </div>
+</form>
+<button type="button" (click)="envoyerOID()" class="btn btn-primary btn-default">Créer</button> <!--Quand on clique sur le bouton ça appel la fonction dans le fichier creer-oids.component.ts qui redirige  -->

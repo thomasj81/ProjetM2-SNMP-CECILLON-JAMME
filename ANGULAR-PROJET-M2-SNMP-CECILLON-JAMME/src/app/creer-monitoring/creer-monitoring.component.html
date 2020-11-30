@@ -1,0 +1,22 @@
+<form [formGroup]="formulaireMonitoring"> <!-- formulaireMonitoring contenu dans creer-oids.component.ts  -->
+  <h2>Créer un Monitoring : </h2>
+  <br>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">Equipement à monitoré *</label>
+      <select type="text" class="form-control" formControlName="equipement" placeholder="Nom_Equipement"> <!-- Champ equipement du formulaireMonitoring contenu dans creer-monitoring.component.ts -->
+        <option *ngFor="let equipement of tableauEquipements" [value]="equipement.id_Equipement"> <!-- *ngFor est l'équivalent d'une boucle for. Ici on boucle sur tableauEquipements contenu dans le fichier creer-monitoring.component.ts -->
+          {{equipement.Nom_Equipement}}</option> <!-- Type menu déroulant qui récupère la valeur dans le tableau à chaque boucle-->
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fname">OID à monitoré *</label>
+      <select type="text" class="form-control" formControlName="oid" placeholder="Numero OID"> <!-- Champ oid du formulaireMonitoring contenu dans creer-monitoring.component.ts -->
+        <option *ngFor="let oid of tableauOIDS" [value]="oid.Id_OID">{{oid.Numero}}</option> <!-- Type menu déroulant qui récupère la valeur dans le tableau à chaque boucle-->
+      </select>
+    </div>
+  </div>
+</form>
+<button type="button" (click)="envoyerMonitoring()" class="btn btn-primary btn-default">Créer</button> <!--Quand on clique sur le bouton ça appel la fonction dans le fichier creer-monitoring.component.ts qui redirige  -->
